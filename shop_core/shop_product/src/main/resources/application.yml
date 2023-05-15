@@ -1,0 +1,35 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: shop-product
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.16.16:8848
+  rabbitmq:
+    host: 192.168.16.16
+    port: 5672
+    username: admin
+    password: 123
+  redis:
+    host: 192.168.16.16
+    port: 6389
+    database: 0
+    timeout: 1800000
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.16.16:3306/shop_product?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+mybatis-plus:
+  mapper-locations: classpath:pers/qh/guli/mapper/xml/*.xml
+  configuration:
+    #控制台打印完整带参数SQL语句
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
