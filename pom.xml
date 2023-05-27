@@ -11,7 +11,7 @@
         <version>2.2.6.RELEASE</version>
     </parent>
 
-    <groupId>pers.qh.guli</groupId>
+    <groupId>pers.qh</groupId>
     <artifactId>gulimall-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <!--父工程-->
@@ -21,9 +21,10 @@
         <module>shop_utils/shop_web_utils</module>
         <module>shop_model</module>
         <module>shop_core</module>
-        <module>shop_core</module>
         <module>shop_mbg</module>
-        <module>shop_mbg</module>
+        <module>shop_gateway</module>
+        <module>shop_web</module>
+        <module>shop_feign_client</module>
     </modules>
 
     <!--定义jar包的版本号-->

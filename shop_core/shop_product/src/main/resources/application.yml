@@ -1,7 +1,10 @@
 server:
   port: 8000
-
 spring:
+  servlet:
+    multipart:
+      maxRequestSize: 20MB
+      maxFileSize: 100MB
   application:
     name: shop-product
   cloud:
@@ -28,8 +31,13 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
 mybatis-plus:
-  mapper-locations: classpath:pers/qh/guli/mapper/xml/*.xml
+  mapper-locations: classpath:pers/qh/mapper/xml/*.xml
   configuration:
     #控制台打印完整带参数SQL语句
     call-setters-on-nulls: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+minio:
+  endpoint: http://192.168.16.16:9000
+  bucketName: images
+  accessKey: qianhuiya
+  secretKey: qianhuiya
